@@ -1,12 +1,13 @@
 package com.bridgelab;
 
-public class LinkedList <T extends Comparable<T>>{
+public class LinkedList <T extends Comparable<T>> {
     Node<T> head;
     Node<T> tail;
+
     //Insert Data from Last
     public void insertNode(T key) {
         Node<T> newNode = new Node<T>(key);
-        if(head == null) {
+        if (head == null) {
             head = newNode;
             tail = newNode;
         } else {
@@ -17,12 +18,12 @@ public class LinkedList <T extends Comparable<T>>{
 
     //Display Node in Linked List
     public void showLinkedList() {
-        if(head == null) {
+        if (head == null) {
             System.out.println("Linked List is Empty.");
         } else {
             Node<T> temp = head;
             while (temp != null) {
-                System.out.print(temp.key + " : " + temp.value +" -> ");
+                System.out.print(temp.key + " : " + temp.value + " -> ");
                 temp = temp.next;
             }
         }
@@ -59,5 +60,5 @@ public class LinkedList <T extends Comparable<T>>{
                 }
             }
         }
-
-
+    }
+}
