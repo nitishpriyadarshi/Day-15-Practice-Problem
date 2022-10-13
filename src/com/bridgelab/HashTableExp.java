@@ -47,5 +47,14 @@ public class HashTableExp<T extends Comparable<T>> {
         }
     }
 
+    //Methode to Remove Key
+    public void removeKey(int index,T word) {
+        if(myHashTableList.contains(index)) {
+            LinkedList linkedList = myHashTableList.get(index);
+            linkedList.removeNode(word);
+        } else {
+            System.out.println("No Key Match with Given Word.");
+        }
 
+    }
 }
